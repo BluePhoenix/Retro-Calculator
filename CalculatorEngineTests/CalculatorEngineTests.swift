@@ -164,5 +164,25 @@ class CalculatorEngineTests: XCTestCase {
 //        calculator.showResult()
 //        XCTAssertEqual(calculator.enteredNumber, 23)
 //    }
-
+    
+    // MARK: - Multiply tests
+    func testMultiply() {
+        calculator.press(3)
+        calculator.multiply()
+        calculator.press(11)
+        
+        calculator.showResult()
+        XCTAssertEqual(calculator.enteredNumber, 33)
+    }
+    
+    // MARK: - Divide tests
+    func tesDivide() {
+        calculator.press(150)
+        calculator.divide()
+        calculator.press(5)
+        
+        calculator.showResult()
+        XCTAssertEqual(calculator.enteredNumber, 30)
+    }
+    
 }

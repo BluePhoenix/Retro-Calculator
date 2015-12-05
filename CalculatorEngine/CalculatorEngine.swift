@@ -62,6 +62,16 @@ class CalculatorEngine {
         enteredValueIsAResult = true
     }
     
+    func multiply() {
+        pushOperator("*")
+        enteredValueIsAResult = true
+    }
+    
+    func divide() {
+        pushOperator("/")
+        enteredValueIsAResult = true
+    }
+    
     func showResult() {
         switch lastOperation {
         case "+":
@@ -74,6 +84,20 @@ class CalculatorEngine {
         case "-":
             let rightValue = enteredNumber
             let totalValue = leftValue - rightValue
+            enteredNumberString = String(totalValue)
+            enteredValueIsAResult = true
+            
+            break
+        case "*":
+            let rightValue = enteredNumber
+            let totalValue = leftValue * rightValue
+            enteredNumberString = String(totalValue)
+            enteredValueIsAResult = true
+            
+            break
+        case "/":
+            let rightValue = enteredNumber
+            let totalValue = leftValue / rightValue
             enteredNumberString = String(totalValue)
             enteredValueIsAResult = true
             
