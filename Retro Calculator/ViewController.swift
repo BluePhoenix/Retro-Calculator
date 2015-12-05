@@ -63,6 +63,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clearButtonTapped(sender: AnyObject) {
+        buttonSound?.play()
+        calculator.clear()
+        displayCalculatorData()
     }
     
     // MARK: Helper functions
@@ -74,7 +77,7 @@ class ViewController: UIViewController {
         numberFormatter.maximumSignificantDigits = 36
         displayLabel.text = numberFormatter.stringFromNumber(calculator.enteredNumber)
         
-        clearButton.enabled = (displayLabel.text != "")
+        clearButton.enabled = (displayLabel.text != "0")
     }
     
     func loadAudioPlayer() {
