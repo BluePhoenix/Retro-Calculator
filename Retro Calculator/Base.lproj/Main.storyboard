@@ -69,6 +69,9 @@
                                                                     <constraint firstAttribute="width" secondItem="tsv-t2-wpZ" secondAttribute="height" multiplier="111:114" id="Mzp-H6-yBa"/>
                                                                 </constraints>
                                                                 <state key="normal" image="clear"/>
+                                                                <connections>
+                                                                    <action selector="clearButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hdU-PZ-AOX"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8B-Qt-Hek">
                                                                 <rect key="frame" x="73" y="0.0" width="56" height="58"/>
@@ -351,6 +354,7 @@
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
+                        <outlet property="clearButton" destination="tsv-t2-wpZ" id="2at-YO-7jM"/>
                         <outlet property="displayLabel" destination="zxj-CA-PZw" id="4Mo-Sv-KGh"/>
                     </connections>
                 </viewController>

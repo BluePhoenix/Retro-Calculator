@@ -12,6 +12,7 @@ import AVFoundation
 class ViewController: UIViewController {
 
     @IBOutlet weak var displayLabel: UILabel!
+    @IBOutlet weak var clearButton: UIButton!
     
     var buttonSound: AVAudioPlayer?
     let calculator = CalculatorEngine()
@@ -61,14 +62,19 @@ class ViewController: UIViewController {
     @IBAction func equalTapped(sender: AnyObject) {
     }
     
+    @IBAction func clearButtonTapped(sender: AnyObject) {
+    }
+    
     // MARK: Helper functions
     func displayCalculatorData() {
         // TODO: Move number formatting into the calculator engine
         // This will allow better tracking of trailing 0 after decimal point
         let numberFormatter = NSNumberFormatter()
         numberFormatter.numberStyle = .DecimalStyle
-        numberFormatter.maximumFractionDigits = 12
+        numberFormatter.maximumSignificantDigits = 36
         displayLabel.text = numberFormatter.stringFromNumber(calculator.enteredNumber)
+        
+        clearButton.enabled = (displayLabel.text != "")
     }
     
     func loadAudioPlayer() {
