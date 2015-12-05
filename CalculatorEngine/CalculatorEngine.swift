@@ -11,6 +11,9 @@ import Foundation
 class CalculatorEngine {
     
     private var enteredNumberString: String = ""
+    private var leftValue: Double = 0.0
+    private var lastOperation: String = ""
+    private var enteredValueIsAResult: Bool = false
     
     var enteredNumber: Double {
         get {
@@ -27,10 +30,17 @@ class CalculatorEngine {
     // MARK: Methods
     func clear() {
         enteredNumberString = ""
+        enteredValueIsAResult = false
     }
     
     func press(digit: Int) {
-        enteredNumberString = enteredNumberString + String(digit)
+        if enteredValueIsAResult {
+            leftValue = enteredNumber
+            enteredNumberString = String(digit)
+            enteredValueIsAResult = false
+        } else {
+            enteredNumberString = enteredNumberString + String(digit)
+        }
     }
     
     func pressDecimal() {
@@ -39,5 +49,31 @@ class CalculatorEngine {
             // If there isn't append it
             enteredNumberString = enteredNumberString + "."
         }
+    }
+    
+    // MARK: Operations
+    func add() {
+        pushOperator("+")
+        enteredValueIsAResult = true
+    }
+    
+    func showResult() {
+        switch lastOperation {
+        case "+":
+            let rightValue = enteredNumber
+            let totalValue = leftValue + rightValue
+            enteredNumberString = String(totalValue)
+            enteredValueIsAResult = true
+
+            break
+        default:
+            break
+            // Do nothing
+        }
+    }
+    
+    // MARK: Helper functions
+    func pushOperator(operation: String) {
+        lastOperation = operation
     }
 }

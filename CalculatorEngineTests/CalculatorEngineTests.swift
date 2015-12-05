@@ -85,5 +85,60 @@ class CalculatorEngineTests: XCTestCase {
         
         XCTAssertEqual(calculator.enteredNumber, 0)
     }
+    
+    // MARK: Operations tests
+    func testAddWithResult() {
+        calculator.press(4)
+        calculator.press(2)
+        calculator.add()
+        calculator.press(1)
+        calculator.press(1)
+        calculator.showResult()
+        
+        XCTAssertEqual(calculator.enteredNumber, 53)
+        
+        // TODO: This implied addition might need to modified
+        calculator.press(2)
+        calculator.press(0)
+        calculator.showResult()
+        
+        XCTAssertEqual(calculator.enteredNumber, 73)
+    }
+    
+    func testAdd() {
+        calculator.press(4)
+        calculator.press(2)
+        calculator.add()
+        calculator.press(1)
+        calculator.press(1)
+        calculator.showResult()
+        
+        XCTAssertEqual(calculator.enteredNumber, 53)
+        
+        calculator.add()
+        calculator.press(2)
+        calculator.press(0)
+        calculator.showResult()
+        
+        XCTAssertEqual(calculator.enteredNumber, 73)
+    }
+    
+    func testAddConsecutively() {
+        calculator.press(4)
+        calculator.add()
+        calculator.press(4)
+        
+        calculator.showResult()
+        XCTAssertEqual(calculator.enteredNumber, 8)
+        
+        calculator.showResult()
+        XCTAssertEqual(calculator.enteredNumber, 12)
+        
+        calculator.showResult()
+        XCTAssertEqual(calculator.enteredNumber, 16)
+        
+        calculator.showResult()
+        XCTAssertEqual(calculator.enteredNumber, 20)
+    }
 
 }
