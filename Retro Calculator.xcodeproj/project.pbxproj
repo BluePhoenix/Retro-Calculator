@@ -79,6 +79,7 @@
 		CE86FAB01C1295B900F7DBF9 = {
 			isa = PBXGroup;
 			children = (
+				CEBD967A1C135B4D008D139F /* Minecraft.ttf */,
 				CEBD96791C135B3C008D139F /* Fonts */,
 				CE86FABB1C1295B900F7DBF9 /* Retro Calculator */,
 				CE86FAD01C1295B900F7DBF9 /* Retro CalculatorTests */,
@@ -131,7 +132,6 @@
 		CEBD96791C135B3C008D139F /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				CEBD967A1C135B4D008D139F /* Minecraft.ttf */,
 			);
 			name = Fonts;
 			sourceTree = "<group>";
