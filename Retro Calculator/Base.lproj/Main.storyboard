@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -22,6 +23,13 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space-background" translatesAutoresizingMaskIntoConstraints="NO" id="KX6-tt-PzO">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ground" translatesAutoresizingMaskIntoConstraints="NO" id="DPk-bS-e4a">
+                                <rect key="frame" x="0.0" y="551" width="600" height="49"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="DPk-bS-e4a" secondAttribute="height" multiplier="888:72" id="ANX-yW-F3h"/>
+                                </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="counter" translatesAutoresizingMaskIntoConstraints="NO" id="k6B-JY-tCS">
                                 <rect key="frame" x="141" y="26" width="318" height="82"/>
@@ -252,6 +260,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="AWy-Ph-XCx" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="0ts-vu-H5p" secondAttribute="bottom" priority="750" constant="20" id="1Jo-g2-XET"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DPk-bS-e4a" secondAttribute="bottom" id="2Gr-9z-Ta2"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KX6-tt-PzO" secondAttribute="bottom" id="6tl-BX-0LZ"/>
                             <constraint firstItem="k6B-JY-tCS" firstAttribute="width" secondItem="AWy-Ph-XCx" secondAttribute="width" id="Ajf-qa-x7I"/>
                             <constraint firstItem="0ts-vu-H5p" firstAttribute="centerY" secondItem="AWy-Ph-XCx" secondAttribute="centerY" id="ECz-if-IhS"/>
@@ -264,6 +273,8 @@
                             <constraint firstItem="0ts-vu-H5p" firstAttribute="leading" secondItem="AWy-Ph-XCx" secondAttribute="leading" priority="750" constant="20" id="cXP-3k-1zW"/>
                             <constraint firstItem="KX6-tt-PzO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="eZd-ly-I0w"/>
                             <constraint firstItem="KX6-tt-PzO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fK0-MO-whh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DPk-bS-e4a" secondAttribute="trailing" constant="-20" id="n1a-hY-lQD"/>
+                            <constraint firstItem="DPk-bS-e4a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="o3Z-1T-hRg"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AWy-Ph-XCx" secondAttribute="bottom" constant="6" id="q0l-pA-faT"/>
                             <constraint firstItem="0ts-vu-H5p" firstAttribute="centerX" secondItem="AWy-Ph-XCx" secondAttribute="centerX" id="v92-re-X0Z"/>
                             <constraint firstItem="AWy-Ph-XCx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yrm-Yw-C0r"/>
@@ -294,6 +305,7 @@
         <image name="counter" width="516" height="133"/>
         <image name="divide" width="111" height="114"/>
         <image name="equal-double" width="111" height="228"/>
+        <image name="ground" width="888" height="72"/>
         <image name="multiply" width="111" height="114"/>
         <image name="period" width="111" height="114"/>
         <image name="space-background" width="988" height="946"/>
