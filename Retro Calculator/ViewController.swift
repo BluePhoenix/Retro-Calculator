@@ -26,6 +26,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        displayLabel.font = UIFont(name: "Minecraft", size: (displayLabel.font?.pointSize)!)
+        
+        for objectFamilyName in UIFont.familyNames() {
+            for fontName in UIFont.fontNamesForFamilyName(objectFamilyName) {
+                print(fontName)
+            }
+        }
+        
         loadAudioPlayer()
         displayCalculatorData()
     }

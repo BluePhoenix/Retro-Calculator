@@ -318,9 +318,6 @@
                                 <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="52"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=compact">
-                                    <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="36"/>
-                                </variation>
                             </label>
                         </subviews>
                         <animations/>
