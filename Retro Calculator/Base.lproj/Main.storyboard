@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Retro_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +18,50 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space-background" translatesAutoresizingMaskIntoConstraints="NO" id="KX6-tt-PzO">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <animations/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="counter" translatesAutoresizingMaskIntoConstraints="NO" id="k6B-JY-tCS">
+                                <rect key="frame" x="141" y="26" width="318" height="82"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="k6B-JY-tCS" secondAttribute="height" multiplier="516:133" id="yRZ-I0-LZP"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backpanel" translatesAutoresizingMaskIntoConstraints="NO" id="AWy-Ph-XCx">
+                                <rect key="frame" x="141" y="114" width="318" height="480"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="AWy-Ph-XCx" secondAttribute="height" multiplier="620:938" id="oCv-Hx-Wdg"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KX6-tt-PzO" secondAttribute="bottom" id="6tl-BX-0LZ"/>
+                            <constraint firstItem="k6B-JY-tCS" firstAttribute="width" secondItem="AWy-Ph-XCx" secondAttribute="width" id="Ajf-qa-x7I"/>
+                            <constraint firstAttribute="trailing" secondItem="KX6-tt-PzO" secondAttribute="trailing" id="HWz-0o-Vvd"/>
+                            <constraint firstItem="k6B-JY-tCS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hg6-Vj-9h9"/>
+                            <constraint firstItem="AWy-Ph-XCx" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="4:5" id="NHq-k5-eNR"/>
+                            <constraint firstItem="AWy-Ph-XCx" firstAttribute="top" secondItem="k6B-JY-tCS" secondAttribute="bottom" constant="6" id="X8u-wI-A42"/>
+                            <constraint firstItem="KX6-tt-PzO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="eZd-ly-I0w"/>
+                            <constraint firstItem="KX6-tt-PzO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fK0-MO-whh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AWy-Ph-XCx" secondAttribute="bottom" constant="6" id="q0l-pA-faT"/>
+                            <constraint firstItem="AWy-Ph-XCx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yrm-Yw-C0r"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="285" y="308"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="backpanel" width="620" height="938"/>
+        <image name="counter" width="516" height="133"/>
+        <image name="space-background" width="988" height="946"/>
+    </resources>
 </document>
