@@ -15,6 +15,11 @@ class ViewController: UIViewController {
     
     var buttonSound: AVAudioPlayer?
     
+    var runningNumber: String = ""
+    var leftValueString = ""
+    var rightValueString = ""
+    var selectedOperator = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -41,6 +46,26 @@ class ViewController: UIViewController {
     @IBAction func numberTapped(sender: UIButton!) {
         buttonSound?.play()
     }
+    
+    @IBAction func decimalPointTapped(sender: AnyObject) {
+        buttonSound?.play()
+    }
+    
+    @IBAction func divideTapped(sender: AnyObject) {
+    }
+    
+    @IBAction func multiplyTapped(sender: AnyObject) {
+    }
+    
+    @IBAction func subtractTapped(sender: AnyObject) {
+    }
+    
+    @IBAction func addTapped(sender: AnyObject) {
+    }
+    
+    @IBAction func equalTapped(sender: AnyObject) {
+    }
+    
 
 }
 
