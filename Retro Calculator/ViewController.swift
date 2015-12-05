@@ -48,12 +48,21 @@ class ViewController: UIViewController {
     }
     
     @IBAction func divideTapped(sender: AnyObject) {
+        buttonSound?.play()
+        calculator.divide()
+        displayCalculatorData()
     }
     
     @IBAction func multiplyTapped(sender: AnyObject) {
+        buttonSound?.play()
+        calculator.multiply()
+        displayCalculatorData()
     }
     
     @IBAction func subtractTapped(sender: AnyObject) {
+        buttonSound?.play()
+        calculator.subtract()
+        displayCalculatorData()
     }
     
     @IBAction func addTapped(sender: AnyObject) {
