@@ -144,5 +144,25 @@ class CalculatorEngineTests: XCTestCase {
     }
     
     // MARK: - Subtract tests
+    func testSubtract() {
+        calculator.press(33)
+        calculator.subtract()
+        calculator.press(11)
+        
+        calculator.showResult()
+        XCTAssertEqual(calculator.enteredNumber, 22)
+    }
+    
+//    func testSubtractConsecutively() {
+//        calculator.press(45)
+//        calculator.subtract()
+//        calculator.press(11)
+//        
+//        calculator.showResult()
+//        XCTAssertEqual(calculator.enteredNumber, 34)
+//        
+//        calculator.showResult()
+//        XCTAssertEqual(calculator.enteredNumber, 23)
+//    }
 
 }
