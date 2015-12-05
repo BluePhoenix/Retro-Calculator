@@ -70,5 +70,20 @@ class CalculatorEngineTests: XCTestCase {
         
         XCTAssertEqual(calculator.enteredNumber, 0.35)
     }
+    
+    // MARK: Clear function tests
+    func testClearButton() {
+        calculator.clear()
+        
+        XCTAssertEqual(calculator.enteredNumber, 0)
+    }
+    
+    func testClearButtonAfterDigitsPressed() {
+        calculator.pressDecimal()
+        calculator.press(1)
+        calculator.clear()
+        
+        XCTAssertEqual(calculator.enteredNumber, 0)
+    }
 
 }

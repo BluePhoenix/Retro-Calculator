@@ -24,6 +24,11 @@ class CalculatorEngine {
         }
     }
     
+    // MARK: Methods
+    func clear() {
+        enteredNumberString = ""
+    }
+    
     func press(digit: Int) {
         enteredNumberString = enteredNumberString + String(digit)
     }
