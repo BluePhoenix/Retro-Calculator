@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE7F887F1C1366AB003A1BC5 /* btn.wav in Resources */ = {isa = PBXBuildFile; fileRef = CE7F887E1C1366AB003A1BC5 /* btn.wav */; };
 		CE86FABD1C1295B900F7DBF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE86FABC1C1295B900F7DBF9 /* AppDelegate.swift */; };
 		CE86FABF1C1295B900F7DBF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE86FABE1C1295B900F7DBF9 /* ViewController.swift */; };
 		CE86FAC21C1295B900F7DBF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE86FAC01C1295B900F7DBF9 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE7F887E1C1366AB003A1BC5 /* btn.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = btn.wav; sourceTree = "<group>"; };
 		CE86FAB91C1295B900F7DBF9 /* Retro Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Retro Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE86FABC1C1295B900F7DBF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE86FABE1C1295B900F7DBF9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,8 +81,7 @@
 		CE86FAB01C1295B900F7DBF9 = {
 			isa = PBXGroup;
 			children = (
-				CEBD967A1C135B4D008D139F /* Minecraft.ttf */,
-				CEBD96791C135B3C008D139F /* Fonts */,
+				CEBD96791C135B3C008D139F /* Other Assets */,
 				CE86FABB1C1295B900F7DBF9 /* Retro Calculator */,
 				CE86FAD01C1295B900F7DBF9 /* Retro CalculatorTests */,
 				CE86FADB1C1295B900F7DBF9 /* Retro CalculatorUITests */,
@@ -129,11 +130,13 @@
 			path = "Retro CalculatorUITests";
 			sourceTree = "<group>";
 		};
-		CEBD96791C135B3C008D139F /* Fonts */ = {
+		CEBD96791C135B3C008D139F /* Other Assets */ = {
 			isa = PBXGroup;
 			children = (
+				CE7F887E1C1366AB003A1BC5 /* btn.wav */,
+				CEBD967A1C135B4D008D139F /* Minecraft.ttf */,
 			);
-			name = Fonts;
+			name = "Other Assets";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE7F887F1C1366AB003A1BC5 /* btn.wav in Resources */,
 				CE86FAC71C1295B900F7DBF9 /* LaunchScreen.storyboard in Resources */,
 				CE86FAC41C1295B900F7DBF9 /* Assets.xcassets in Resources */,
 				CEBD967B1C135B4D008D139F /* Minecraft.ttf in Resources */,
