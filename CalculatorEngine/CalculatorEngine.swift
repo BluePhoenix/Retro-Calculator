@@ -19,7 +19,7 @@ class CalculatorEngine {
         get {
             if let number = Double(enteredNumberString) {
                 return number
-            } else if enteredNumberString == "" {
+            } else if enteredNumberString == "" || enteredNumberString == "." {
                 return 0
             } else {
                 return Double.NaN

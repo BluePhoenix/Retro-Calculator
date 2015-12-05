@@ -73,6 +73,12 @@ class CalculatorEngineTests: XCTestCase {
         XCTAssertEqual(calculator.enteredNumber, 0.35)
     }
     
+    func testDecimalWithNoDigits() {
+        calculator.pressDecimal()
+
+        XCTAssertEqual(calculator.enteredNumber, 0)
+    }
+    
     // MARK: - Clear tests
     func testClearButton() {
         calculator.clear()
