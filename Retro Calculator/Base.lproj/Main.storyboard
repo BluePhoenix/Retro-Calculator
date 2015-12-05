@@ -62,7 +62,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="l4j-Lk-SNh">
                                                         <rect key="frame" x="0.0" y="0.0" width="286" height="58"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tsv-t2-wpZ">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tsv-t2-wpZ">
                                                                 <rect key="frame" x="0.0" y="0.0" width="57" height="58"/>
                                                                 <animations/>
                                                                 <constraints>

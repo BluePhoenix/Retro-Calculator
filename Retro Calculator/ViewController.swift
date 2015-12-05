@@ -91,8 +91,6 @@ class ViewController: UIViewController {
         numberFormatter.numberStyle = .DecimalStyle
         numberFormatter.maximumSignificantDigits = 36
         displayLabel.text = numberFormatter.stringFromNumber(calculator.enteredNumber)
-        
-        clearButton.enabled = (displayLabel.text != "0")
     }
     
     func loadAudioPlayer() {
