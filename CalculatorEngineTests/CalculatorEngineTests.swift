@@ -23,6 +23,10 @@ class CalculatorEngineTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
+    
+    func testNoDigitsEntered() {
+        XCTAssertEqual(calculator.enteredNumber, 0)
+    }
 
     func testDigitPressed() {
         calculator.press(4)
@@ -39,6 +43,32 @@ class CalculatorEngineTests: XCTestCase {
         calculator.press(3)
         
         XCTAssertEqual(calculator.enteredNumber, 2553)
+    }
+    
+    func testDigitsWithDecimal() {
+        calculator.press(5)
+        calculator.pressDecimal()
+        calculator.press(3)
+        calculator.press(5)
+        
+        XCTAssertEqual(calculator.enteredNumber, 5.35)
+    }
+    
+    func testDigitsWithDecimalNoLeadingZero() {
+        calculator.pressDecimal()
+        calculator.press(3)
+        calculator.press(5)
+        
+        XCTAssertEqual(calculator.enteredNumber, 0.35)
+    }
+    
+    func testDigitsWithMultipleDecimals() {
+        calculator.pressDecimal()
+        calculator.press(3)
+        calculator.pressDecimal()
+        calculator.press(5)
+        
+        XCTAssertEqual(calculator.enteredNumber, 0.35)
     }
     
     func testPerformanceExample() {
