@@ -7,14 +7,27 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var displayLabel: UILabel!
     
+    var buttonSound: AVAudioPlayer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let path = NSBundle.mainBundle().pathForResource("btn", ofType: "wav")
+        let soundURL = NSURL(fileURLWithPath: path!)
+        
+        do {
+            try buttonSound = AVAudioPlayer(contentsOfURL: soundURL)
+            buttonSound.prepareToPlay()
+        } catch let err as NSError {
+            print("Error creating sound: \(err.debugDescription)")
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,7 +36,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func numberTapped(sender: UIButton!) {
-        
+        buttonSound.play()
     }
 
 }
