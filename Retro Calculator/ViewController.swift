@@ -57,9 +57,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func addTapped(sender: AnyObject) {
+        buttonSound?.play()
+        calculator.add()
+        displayCalculatorData()
     }
     
     @IBAction func equalTapped(sender: AnyObject) {
+        buttonSound?.play()
+        calculator.showResult()
+        displayCalculatorData()
     }
     
     @IBAction func clearButtonTapped(sender: AnyObject) {
