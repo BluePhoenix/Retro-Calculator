@@ -1,6 +1,6 @@
 # Retro Calculator #
 
-Enjoy calculating away to the pixelated flavors of the past.
+Enjoy the pixelated flavor of your calculations.
 
 # Screenshots #
 
