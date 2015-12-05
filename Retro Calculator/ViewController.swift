@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var displayLabel: UILabel!
     
     var buttonSound: AVAudioPlayer?
+    let calculator = CalculatorEngine()
     
     var runningNumber: String = ""
     var leftValueString = ""
@@ -25,6 +26,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         loadAudioPlayer()
+        displayCalculatorData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,10 +36,14 @@ class ViewController: UIViewController {
 
     @IBAction func numberTapped(sender: UIButton!) {
         buttonSound?.play()
+        calculator.press(sender.tag)
+        displayCalculatorData()
     }
     
     @IBAction func decimalPointTapped(sender: AnyObject) {
         buttonSound?.play()
+        calculator.pressDecimal()
+        displayCalculatorData()
     }
     
     @IBAction func divideTapped(sender: AnyObject) {
@@ -56,12 +62,22 @@ class ViewController: UIViewController {
     }
     
     // MARK: Helper functions
+    func displayCalculatorData() {
+        // TODO: Move number formatting into the calculator engine
+        // This will allow better tracking of trailing 0 after decimal point
+        let numberFormatter = NSNumberFormatter()
+        numberFormatter.numberStyle = .DecimalStyle
+        numberFormatter.maximumFractionDigits = 12
+        displayLabel.text = numberFormatter.stringFromNumber(calculator.enteredNumber)
+    }
+    
     func loadAudioPlayer() {
         if let path = NSBundle.mainBundle().pathForResource("btn", ofType: "wav") {
             let soundURL = NSURL(fileURLWithPath: path)
             
             do {
                 try buttonSound = AVAudioPlayer(contentsOfURL: soundURL)
+                buttonSound?.volume = 0.1
                 buttonSound?.prepareToPlay()
             } catch let err as NSError {
                 print("Error creating sound: \(err.debugDescription)")

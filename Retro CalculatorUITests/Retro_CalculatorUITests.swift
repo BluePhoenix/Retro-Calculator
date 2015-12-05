@@ -28,9 +28,26 @@ class Retro_CalculatorUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testDisplayLongDecimals() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let app = XCUIApplication()
+        let buttonFive = app.buttons["5"]
+        let buttonSix = app.buttons["6"]
+        let buttonZero = app.buttons["0 double wide"]
+        let decimalButton = app.buttons["period"]
+        
+        buttonFive.tap()
+        buttonSix.tap()
+        decimalButton.tap()
+        buttonZero.tap()
+        buttonZero.tap()
+        buttonZero.tap()
+        buttonZero.tap()
+        buttonZero.tap()
+        buttonFive.tap()
+        
+        XCTAssertEqual(app.staticTexts.elementBoundByIndex(0).label, "56.000005")
     }
     
 }
