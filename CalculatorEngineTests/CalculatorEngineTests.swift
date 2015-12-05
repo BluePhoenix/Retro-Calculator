@@ -24,6 +24,8 @@ class CalculatorEngineTests: XCTestCase {
         super.tearDown()
     }
     
+    // MARK: - Digit tests
+    
     func testNoDigitsEntered() {
         XCTAssertEqual(calculator.enteredNumber, 0)
     }
@@ -71,7 +73,7 @@ class CalculatorEngineTests: XCTestCase {
         XCTAssertEqual(calculator.enteredNumber, 0.35)
     }
     
-    // MARK: Clear function tests
+    // MARK: - Clear tests
     func testClearButton() {
         calculator.clear()
         
@@ -86,7 +88,7 @@ class CalculatorEngineTests: XCTestCase {
         XCTAssertEqual(calculator.enteredNumber, 0)
     }
     
-    // MARK: Operations tests
+    // MARK: - Add tests
     func testAddWithResult() {
         calculator.press(4)
         calculator.press(2)
@@ -140,5 +142,7 @@ class CalculatorEngineTests: XCTestCase {
         calculator.showResult()
         XCTAssertEqual(calculator.enteredNumber, 20)
     }
+    
+    // MARK: - Subtract tests
 
 }
