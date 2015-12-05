@@ -108,5 +108,10 @@ class ViewController: UIViewController {
             print("Error could not find path specified for sound file.")
         }
     }
+    
+    // Status bar
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+    }
 }
 
