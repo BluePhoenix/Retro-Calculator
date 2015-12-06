@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,8 +18,31 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space-background" translatesAutoresizingMaskIntoConstraints="NO" id="hdw-YT-YUB">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ground" translatesAutoresizingMaskIntoConstraints="NO" id="Jvp-hd-8Gy">
+                                <rect key="frame" x="0.0" y="551" width="600" height="49"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Jvp-hd-8Gy" secondAttribute="height" multiplier="888:72" id="uaL-tE-gEC"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="hdw-YT-YUB" secondAttribute="bottom" id="JKa-H4-tS4"/>
+                            <constraint firstItem="Jvp-hd-8Gy" firstAttribute="width" secondItem="Jvp-hd-8Gy" secondAttribute="height" multiplier="888:72" id="OzL-rH-5Z3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hdw-YT-YUB" secondAttribute="trailing" constant="-20" id="T9n-Ck-3YK"/>
+                            <constraint firstItem="hdw-YT-YUB" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" id="dxM-PO-8X0"/>
+                            <constraint firstItem="hdw-YT-YUB" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-20" id="eXK-f9-ZYm"/>
+                            <constraint firstItem="Jvp-hd-8Gy" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-20" id="eik-Vh-d5I"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Jvp-hd-8Gy" secondAttribute="bottom" id="ikE-N2-Mh5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jvp-hd-8Gy" secondAttribute="trailing" constant="-20" id="lid-bl-yaG"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -25,4 +50,8 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ground" width="888" height="72"/>
+        <image name="space-background" width="988" height="946"/>
+    </resources>
 </document>
