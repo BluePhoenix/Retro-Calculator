@@ -36,49 +36,49 @@ class ViewController: UIViewController {
     }
 
     @IBAction func numberTapped(sender: UIButton!) {
-        buttonSound?.play()
+        playSound()
         calculator.press(sender.tag)
         displayCalculatorData()
     }
     
     @IBAction func decimalPointTapped(sender: AnyObject) {
-        buttonSound?.play()
+        playSound()
         calculator.pressDecimal()
         displayCalculatorData()
     }
     
     @IBAction func divideTapped(sender: AnyObject) {
-        buttonSound?.play()
+        playSound()
         calculator.divide()
         displayCalculatorData()
     }
     
     @IBAction func multiplyTapped(sender: AnyObject) {
-        buttonSound?.play()
+        playSound()
         calculator.multiply()
         displayCalculatorData()
     }
     
     @IBAction func subtractTapped(sender: AnyObject) {
-        buttonSound?.play()
+        playSound()
         calculator.subtract()
         displayCalculatorData()
     }
     
     @IBAction func addTapped(sender: AnyObject) {
-        buttonSound?.play()
+        playSound()
         calculator.add()
         displayCalculatorData()
     }
     
     @IBAction func equalTapped(sender: AnyObject) {
-        buttonSound?.play()
+        playSound()
         calculator.showResult()
         displayCalculatorData()
     }
     
     @IBAction func clearButtonTapped(sender: AnyObject) {
-        buttonSound?.play()
+        playSound()
         calculator.clear()
         displayCalculatorData()
     }
@@ -107,6 +107,18 @@ class ViewController: UIViewController {
         } else {
             print("Error could not find path specified for sound file.")
         }
+    }
+    
+    func playSound() {
+        guard let sound = buttonSound else {
+            return
+        }
+        
+        if sound.playing {
+            sound.stop()
+        }
+        
+        sound.play()
     }
     
     // Status bar
