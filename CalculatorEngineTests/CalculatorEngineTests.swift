@@ -182,7 +182,7 @@ class CalculatorEngineTests: XCTestCase {
     }
     
     // MARK: - Divide tests
-    func tesDivide() {
+    func testDivide() {
         calculator.press(150)
         calculator.divide()
         calculator.press(5)
